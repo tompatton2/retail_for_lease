@@ -1,0 +1,11 @@
+<h1><%= pluralize(@properties.size, "Property")  %></h1>
+
+<% @properties.each do |property| %>
+  <h2><%= link_to property.street, property_path(property) %></h2>
+  <p><%= property.header  %></p>
+  <ul>
+    <li><%= property.city %></li>
+    <li><%= property.state %></li>
+    <li><%= property.description %></li>
+  </ul>
+<% end %>
